@@ -1,0 +1,27 @@
+// lightsource - свет
+{
+	"Type" : "sphere",
+	
+	"Radius" : 0.1 ,
+    "Position" :
+    {
+
+        "distance x" : 9.0 ,
+        "distance y" : 0 ,
+		"distance z" : 0
+		
+	},
+	"Color" :
+	{
+		"red"   : 1.100 ,
+		"green" : 0.000 ,
+		"blue"  : 1.100
+	},
+	"Emission" : 
+	{
+		"red"   : 0.5100 ,
+		"green" : 2.50 ,
+		"blue"  : 0.510
+	},
+	"Reflection" : 0
+}
