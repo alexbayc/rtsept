@@ -6,21 +6,22 @@
     "Position" :
     {
 
-        "distance x" : 9.0 ,
+        "distance x" : 5 ,
+        "distance y" : 0 ,
 		"distance z" : 0
 		
 	},
 	"Color" :
 	{
-		"red"   : 1.100 ,
+		"red" : 1.100 ,
 		"green" : 0.000 ,
 		"blue"  : 1.100
 	},
 	"Emission" : 
 	{
-		"red"   : 0.5100 ,
+		"red"   : 1 ,
 		"green" : 2.50 ,
 		"blue"  : 0.510
 	},
-	"Reflection" : 0
+	"Reflection" : 3
 }

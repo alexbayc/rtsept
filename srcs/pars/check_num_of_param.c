@@ -6,7 +6,7 @@
 /*   By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 19:23:55 by odale-dr          #+#    #+#             */
-/*   Updated: 2019/09/04 20:44:00 by odale-dr         ###   ########.fr       */
+/*   Updated: 2019/09/05 19:05:32 by odale-dr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int					check_num2(char *stroka)
 		i++;
 	}
 	ft_putstrv("You have not parametr at one of your line");
-	ft_putstrv("Right record for example: ' ''distance y'' : 0.5 , ' ");
+	ft_putstrv("Right record for example: ' ''green'' : 1.5 , ' ");
 	return (-1);
 }
 

@@ -6,7 +6,7 @@
 #    By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/16 12:58:07 by jblack-b          #+#    #+#              #
-#    Updated: 2019/09/04 19:35:04 by odale-dr         ###   ########.fr        #
+#    Updated: 2019/09/05 19:48:57 by odale-dr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,7 +72,8 @@ SRCS_LIST += pars/create_cfloat3x.c \
 			 pars/type_plane.c pars/type_cyl.c pars/type_cone.c \
 			 pars/check_position.c pars/find_end_of_block.c \
 			 pars/check_color.c pars/check_emission.c \
-			 pars/check_num_of_param.c
+			 pars/check_num_of_param.c pars/check_reflection.c \
+			 pars/pulling_out.c
 			 
 OBJS_DIRECTORY = objects/
 OBJS_LIST = $(patsubst %.c, %.o, $(SRCS_LIST))

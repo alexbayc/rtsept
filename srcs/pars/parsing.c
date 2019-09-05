@@ -6,7 +6,7 @@
 /*   By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/31 13:57:20 by odale-dr          #+#    #+#             */
-/*   Updated: 2019/08/31 19:44:46 by odale-dr         ###   ########.fr       */
+/*   Updated: 2019/09/05 19:52:50 by odale-dr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,9 @@ int						parsing(t_objpoint *f, char **file)
 			flag = cuting(file, &i, f);
 		i++;
 	}
-	ft_putstr(ft_itoa(i));
+	ft_putendl(ft_itoa(i));
+	ft_putendl(ft_itoa(f->end));
+	ft_putendl(ft_itoa(f->next->end));
+	ft_putendl("\nKONEC");
 	return (flag);
 }

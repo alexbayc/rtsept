@@ -472,4 +472,6 @@ int					repit_d(int st, int end, char *sl, char **file);
 int					check_color(t_objpoint *f);
 int					check_emission(t_objpoint *f);
 int					check_num_of_param(char *stroka, char *parametr);
+int					check_reflection(t_objpoint *f);
+int					pulling_out(t_objpoint *f);
 #endif
