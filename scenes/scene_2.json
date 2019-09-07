@@ -219,7 +219,7 @@
 		"green" : 0.80 ,
 		"blue"  : 0.70
 	},
-	"emission" :
+	"Emission" :
 	{
 		"red"   : 0.1000 ,
 		"green" : 1.0 ,
@@ -250,7 +250,7 @@
 		"green" : 1.80 ,
 		"blue"  : 1.70
 	},
-	"emission" :
+	"Emission" :
 	{
 		"red"   : 0.1000 ,
 		"green" : 0.0 ,
@@ -281,7 +281,7 @@
 		"green" : 1.80 ,
 		"blue"  : 2.70
 	},
-	"emission" :
+	"Emission" :
 	{
 		"red"   : 1.1000 ,
 		"green" : 0.0 ,
@@ -312,7 +312,7 @@
 		"green" : 0.80 ,
 		"blue"  : 0.70
 	},
-	"emission" :
+	"Emission" :
 	{
 		"red"   : 0.9000 ,
 		"green" : 1.0 ,
@@ -337,7 +337,7 @@
 		"green" : 1.80 ,
 		"blue"  : 0.70
 	},
-	"emission" :
+	"Emission" :
 	{
 		"red"   : 0.71000 ,
 		"green" : 0.0 ,
@@ -345,5 +345,5 @@
 	},
 	"Reflection" : 0 ,
 
-	"plane_d" : 0.4
+	"Plane_d" : 0.4
 }

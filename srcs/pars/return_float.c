@@ -6,7 +6,7 @@
 /*   By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 19:13:28 by odale-dr          #+#    #+#             */
-/*   Updated: 2019/07/18 21:28:10 by odale-dr         ###   ########.fr       */
+/*   Updated: 2019/09/07 18:24:10 by odale-dr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,6 @@ float			return_float(char *s)
 
 	znak = 1;
 	x = 0;
-	// ft_putstr("\n \n");
-	// ft_putstr(s);
 	i = 0;
 	while (ft_isdigit(s[i]) != 1)
 	{

@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   valid_type.c                                       :+:      :+:    :+:   */
+/*   pulling_sphere.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/31 18:15:01 by odale-dr          #+#    #+#             */
-/*   Updated: 2019/09/07 16:48:24 by odale-dr         ###   ########.fr       */
+/*   Created: 2019/09/07 17:30:36 by odale-dr          #+#    #+#             */
+/*   Updated: 2019/09/07 18:59:02 by odale-dr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rtv1.h"
 
-int					valid_type(t_objpoint *f, int type)
+int					pulling_sphere(t_objpoint *f)
 {
-	int				i;
+	float			rad;
+	char			*str;
 
-	i = 0;
-	if (type == 1)
-		i = type_sphere(f);
-	if (type == 2)
-		i = type_cyl(f);
-	if (type == 3)
-		i = type_plane(f);
-	if (type == 4)
-		i = type_cone(f);
-	return (i);
+	ft_putendl("+++++++++++++++");
+	if ((rad = return_radius(f)) == -1)
+		return (-1);
+	ft_putendl("+++++++++++++++");
+	f->fig = malloc(sizeof(t_obj));
+	f->fig->type = SPHERE;
+	return (0);
 }

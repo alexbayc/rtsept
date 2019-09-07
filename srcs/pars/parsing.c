@@ -6,7 +6,7 @@
 /*   By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/31 13:57:20 by odale-dr          #+#    #+#             */
-/*   Updated: 2019/09/05 19:52:50 by odale-dr         ###   ########.fr       */
+/*   Updated: 2019/09/07 19:03:10 by odale-dr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ int						extract(int st, int end, char **file, t_objpoint *f)
 		return (-1);
 	ft_putstr(ft_itoa(f->end));
 	ft_putstr(" <--------++++++ end of obj\n\n\n");
+	if (pulling_out(f, type) != 0)
+		return (-1);
 	f->next = memory_for_objpoint();
 	return (0);
 }
@@ -88,7 +90,7 @@ int						parsing(t_objpoint *f, char **file)
 	}
 	ft_putendl(ft_itoa(i));
 	ft_putendl(ft_itoa(f->end));
-	ft_putendl(ft_itoa(f->next->end));
+	//ft_putendl(ft_itoa(f->next->end));
 	ft_putendl("\nKONEC");
 	return (flag);
 }

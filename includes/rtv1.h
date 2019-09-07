@@ -473,5 +473,14 @@ int					check_color(t_objpoint *f);
 int					check_emission(t_objpoint *f);
 int					check_num_of_param(char *stroka, char *parametr);
 int					check_reflection(t_objpoint *f);
-int					pulling_out(t_objpoint *f);
+int					pulling_out(t_objpoint *f, int type);
+int					check_rotation(t_objpoint *f);
+int					check_plane(t_objpoint *f);
+int					check_radius(t_objpoint *f);
+int					pulling_sphere(t_objpoint *f);
+int					pulling_cyl(t_objpoint *f);
+int					pulling_con(t_objpoint *f);
+int					pulling_plane(t_objpoint *f);
+float				return_float(char *s);
+float				return_radius(t_objpoint *f);
 #endif

@@ -6,7 +6,7 @@
 /*   By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/31 18:22:15 by odale-dr          #+#    #+#             */
-/*   Updated: 2019/09/05 20:05:59 by odale-dr         ###   ########.fr       */
+/*   Updated: 2019/09/07 17:40:22 by odale-dr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int					check_blocks(t_objpoint *f)
 	if (check_emission(f) == -1)
 		return (-1);
 	if (check_reflection(f) == -1)
+		return (-1);
+	if (check_radius(f) == -1)
 		return (-1);
 	return (0);
 }
@@ -61,7 +63,5 @@ int					type_sphere(t_objpoint *f)
 		return (-1);
 	if (check_blocks(f) == -1)
 		return (-1);
-	// if (pulling_out(f) == -1)
-	// 	return (-1);
 	return (0);
 }
