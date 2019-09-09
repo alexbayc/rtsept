@@ -6,7 +6,7 @@
 /*   By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 17:30:36 by odale-dr          #+#    #+#             */
-/*   Updated: 2019/09/07 18:59:02 by odale-dr         ###   ########.fr       */
+/*   Updated: 2019/09/09 20:14:37 by odale-dr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,18 @@ int					pulling_sphere(t_objpoint *f)
 	float			rad;
 	char			*str;
 
-	ft_putendl("+++++++++++++++");
-	if ((rad = return_radius(f)) == -1)
+	if ((f->fig = malloc(sizeof(t_obj))) == NULL)
 		return (-1);
-	ft_putendl("+++++++++++++++");
-	f->fig = malloc(sizeof(t_obj));
 	f->fig->type = SPHERE;
+	if ((f->fig->radius = return_radius(f)) == -1)
+		return (-1);
+	if ((f->fig->reflection = return_reflection(f)) == -1)
+		return (-1);
+	if (return_position(f) == -1)
+		return (-1);
+	if (return_color(f) == -1)
+		return (-1);
+	if (return_emission(f) == -1)
+		return (-1);
 	return (0);
 }

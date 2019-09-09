@@ -6,7 +6,7 @@
 /*   By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 15:34:45 by sdurgan           #+#    #+#             */
-/*   Updated: 2019/09/05 19:38:06 by odale-dr         ###   ########.fr       */
+/*   Updated: 2019/09/09 20:09:17 by odale-dr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -225,6 +225,7 @@ int	main(int argc, char **argv)
 	game.origin = (t_vec3){0,0,5,1};
 	game.gpu = (t_gpu *)malloc(sizeof(t_gpu));
 	game.gpu->scene = argv[1];
+	game.gpu->f = figure;
 	opencl_init(game.gpu, &game);
 	ft_init_window(game.sdl, WIN_W, WIN_H);
 

@@ -116,7 +116,7 @@ void initScene(t_obj* cpu_spheres)
 	// left sphere
 	cpu_spheres[0].radius   = 0.1f;
 	cpu_spheres[0].position = create_cfloat3 (-0.4f, -0.f, -0.1f);
-	cpu_spheres[0].color    = create_cfloat3 (0.9f, 0.8f, 0.7f);
+	cpu_spheres[0].color    = create_cfloat3 (1.9f, 0.8f, 0.7f);
 	cpu_spheres[0].v = create_cfloat3 (0.f, 1.0f, 0.0f);
 	cpu_spheres[0].emission = create_cfloat3 (0.0f, 0.0f, 0.0f);
 	cpu_spheres[0].type = CYLINDER;
@@ -224,7 +224,7 @@ int opencl_init(t_gpu *gpu, t_game *game)
 	// ft_putstr(ft_itoa(quan_type(gpu->scene)));
 	// ft_putstr("\n \n \n \n");
 	gpu->samples = 0;
-	initScene(gpu->spheres);
+	initScene2(gpu->spheres);
 	bind_data(gpu, &game->main_objs);
     return (gpu->err);
 }

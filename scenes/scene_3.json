@@ -2,25 +2,25 @@
 {
 	"Type" : "sphere",
 	
-	"Radius" : 0.21 ,
+	"Radius" : 1234.0 ,
     "Position" :
     {
 
         "distance x" : 5 ,
-        "distance y" : 0 ,
+        "distance y" : -20 ,
 		"distance z" : 0
 		
 	},
 	"Color" :
 	{
 		"red" : 1.100 ,
-		"green" : 0.000 ,
+		"green" : 0.1000 ,
 		"blue"  : 1.100
 	},
 	"Emission" : 
 	{
 		"red"   : 1 ,
-		"green" : 2.50 ,
+		"green" : 9 ,
 		"blue"  : 0.510
 	},
 	"Reflection" : 3

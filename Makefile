@@ -6,7 +6,7 @@
 #    By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/16 12:58:07 by jblack-b          #+#    #+#              #
-#    Updated: 2019/09/07 18:55:57 by odale-dr         ###   ########.fr        #
+#    Updated: 2019/09/09 19:50:07 by odale-dr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,7 +76,8 @@ SRCS_LIST += pars/create_cfloat3x.c \
 			 pars/pulling_out.c pars/check_rotation.c pars/check_plane.c \
 			 pars/check_radius.c pars/pulling_sphere.c pars/pulling_cyl.c \
 			 pars/pulling_plane.c pars/pulling_con.c \
-			 pars/return_radius.c
+			 pars/return_radius.c pars/return_position.c \
+			 pars/return_color.c pars/return_emission.c
 			 
 OBJS_DIRECTORY = objects/
 OBJS_LIST = $(patsubst %.c, %.o, $(SRCS_LIST))

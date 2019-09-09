@@ -309,6 +309,7 @@ typedef struct s_gpu
 	t_camera *camera;
 	char	*scene;
 	int samples;
+	t_objpoint *f;
 }				t_gpu;
 
 
@@ -330,6 +331,7 @@ typedef struct s_game
 	t_main_obj	main_objs;
 	t_gpu *gpu;
 	int init_render;
+	t_objpoint *f;
 } t_game;
 
 int bind_data(t_gpu *gpu, t_main_obj *main);
@@ -483,4 +485,10 @@ int					pulling_con(t_objpoint *f);
 int					pulling_plane(t_objpoint *f);
 float				return_float(char *s);
 float				return_radius(t_objpoint *f);
+float				return_reflection(t_objpoint *f);
+float				return_xyz(char *str);
+int					return_position(t_objpoint *f);
+int					return_color(t_objpoint *f);
+int					return_emission(t_objpoint *f);
+float					return_clr(char *str);
 #endif
