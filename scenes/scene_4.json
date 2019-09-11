@@ -1,4 +1,4 @@
-./// floor - пол
+/// floor - пол
 {
 	"Type" : "sphere",
 	"Radius" : 200 ,
@@ -195,66 +195,4 @@
 		"blue"  : 0.1000
 	},
 	"Reflection" : 5
-}
-
-// cyl cen
-{
-	//"Type" : "cylinder",
-	"Radius" : 0.015 ,
-	"Rotation" :
-	{
-		"x" : 0 ,
-		"y" : 1 ,
-		"z" : 0
-	},
-    "Position" :
-    {
-        "distance x" : 0.00 ,
-        "distance y" : 0.00 ,
-        "distance z" : 0.00
-	},
-	"Color" :
-	{
-		"red"   : 0.90 ,
-		"green" : 0.80 ,
-		"blue"  : 0.70
-	},
-	"Emission" :
-	{
-		"red"   : 0.1000 ,
-		"green" : 1.0 ,
-		"blue"  : 0.0
-	},
-	"Reflection" : 0
-}
-
-// cyl right
-{
-	"Type" : "cylinder",
-	"Radius" : 0.015 ,
-	"Rotation" :
-	{
-		"x" : 0 ,
-		"y" : 1 ,
-		"z" : 0
-	},
-    "Position" :
-    {
-        "distance x" : -0.100 ,
-        "distance y" : 0.00 ,
-        "distance z" : 0.00
-	},
-	"Color" :
-	{
-		"red"   : 0.90 ,
-		"green" : 1.80 ,
-		"blue"  : 1.70
-	},
-	"Emission" :
-	{
-		"red"   : 0.1000 ,
-		"green" : 0.0 ,
-		"blue"  : 2.0
-	},
-	"Reflection" : 0
 }

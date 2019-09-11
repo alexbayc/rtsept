@@ -6,7 +6,7 @@
 /*   By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 17:30:36 by odale-dr          #+#    #+#             */
-/*   Updated: 2019/09/09 20:14:37 by odale-dr         ###   ########.fr       */
+/*   Updated: 2019/09/11 19:27:21 by odale-dr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,7 @@ int					pulling_sphere(t_objpoint *f)
 		return (-1);
 	if (return_emission(f) == -1)
 		return (-1);
+	f->fig->plane_d = 0;
+	f->fig->v = create_cfloat3(0.0f, 0.0f, 0.0f);
 	return (0);
 }

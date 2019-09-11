@@ -230,12 +230,12 @@
 
 // cyl right
 {
-	"Type" : "cylinder",
-	"Radius" : 0.015 ,
+	"Type" : "cone",
+	"Radius" : 0.1015 ,
 	"Rotation" :
 	{
-		"x" : 0 ,
-		"y" : 1 ,
+		"x" : 1 ,
+		"y" : 0 ,
 		"z" : 0
 	},
     "Position" :

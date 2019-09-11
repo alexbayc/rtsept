@@ -14,7 +14,7 @@
 		"green" : 0.000 ,
 		"blue"  : 1.100
 	},
-	"emission" :
+	"Emission" :
 	{
 		"red"   : 0.5100 ,
 		"green" : 2.50 ,
@@ -39,7 +39,7 @@
 		"green" : 0.00 ,
 		"blue"  : 0.6120
 	},
-	"emission" :
+	"Emission" :
 	{
 		"red"   : 1.0 ,
 		"green" : 0.0 ,
@@ -64,7 +64,7 @@
 		"green" : 0.8 ,
 		"blue"  : 0.7
 	},
-	"emission" :
+	"Emission" :
 	{
 		"red"   : 0.0 ,
 		"green" : 0.0 ,
@@ -89,7 +89,7 @@
 		"green" : 0.80 ,
 		"blue"  : 0.89
 	},
-	"emission" :
+	"Emission" :
 	{
 		"red"   : 0.0 ,
 		"green" : 0.0 ,
@@ -114,7 +114,7 @@
 		"green" : 0.10 ,
 		"blue"  : 0.120
 	},
-	"emission" :
+	"Emission" :
 	{
 		"red"   : 0.0 ,
 		"green" : 0.0 ,
@@ -139,7 +139,7 @@
 		"green" : 0.10 ,
 		"blue"  : 0.120
 	},
-	"emission" :
+	"Emission" :
 	{
 		"red"   : 0.0 ,
 		"green" : 0.0 ,
@@ -150,7 +150,7 @@
 
 // cyl cen
 {
-	"Type" : "cyl",
+	"Type" : "cylinder",
 	"Radius" : 0.015 ,
 	"Rotation" :
 	{
@@ -170,7 +170,7 @@
 		"green" : 0.80 ,
 		"blue"  : 0.70
 	},
-	"emission" :
+	"Emission" :
 	{
 		"red"   : 0.1000 ,
 		"green" : 1.0 ,
@@ -181,7 +181,7 @@
 
 // cyl right
 {
-	"Type" : "cyl",
+	"Type" : "cylinder",
 	"Radius" : 0.015 ,
 	"Rotation" :
 	{
@@ -201,7 +201,7 @@
 		"green" : 1.80 ,
 		"blue"  : 1.70
 	},
-	"emission" :
+	"Emission" :
 	{
 		"red"   : 0.1000 ,
 		"green" : 0.0 ,
@@ -212,7 +212,7 @@
 
 // cyl left
 {
-	//"Type" : "cyl",
+	//"Type" : "cylinder",
 	"Radius" : 0.015 ,
 	"Rotation" :
 	{
@@ -232,7 +232,7 @@
 		"green" : 1.80 ,
 		"blue"  : 2.70
 	},
-	"emission" :
+	"Emission" :
 	{
 		"red"   : 1.1000 ,
 		"green" : 0.0 ,

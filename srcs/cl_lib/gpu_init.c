@@ -60,7 +60,7 @@ int bind_data(t_gpu *gpu, t_main_obj *main)
 	int h = WIN_H;
 	size_t global = WIN_W * WIN_H;
 	const int count = global;
-	const int n_spheres = 9;
+	const int n_spheres = quan_of_obj(gpu->f);
 	//const int n_spheres = quan_type(gpu->scene);
 	int i;
 	int j;
@@ -193,6 +193,28 @@ void initScene(t_obj* cpu_spheres)
 	cpu_spheres[5].reflection = 0;
 }
 
+void initScene2(t_obj* cpu_spheres, int n, t_objpoint *ff)
+{
+	int 			i;
+	t_objpoint 		*f;
+
+	i = 0;
+	f = ff;
+	while (i < n)
+	{
+		cpu_spheres[i].radius   = f->fig->radius; 
+		cpu_spheres[i].position = f->fig->position;
+		cpu_spheres[i].color    = f->fig->color;
+		cpu_spheres[i].emission = f->fig->emission;
+		cpu_spheres[i].type = f->fig->type;
+		cpu_spheres[i].reflection = f->fig->reflection;
+		cpu_spheres[i].plane_d = f->fig->plane_d;
+		cpu_spheres[i].v = f->fig->v;
+		i++;
+		f = f->next;
+	}
+}
+
 int opencl_init(t_gpu *gpu, t_game *game)
 {
     int     i;
@@ -217,14 +239,16 @@ int opencl_init(t_gpu *gpu, t_game *game)
     gpu_read_kernel(gpu);
 	gpu->kernel = clCreateKernel(gpu->program, "render_kernel", &gpu->err);
 	gpu->cpuOutput = malloc(sizeof(int) * (WIN_H * WIN_H));
-	gpu->spheres = malloc(sizeof(t_obj) * 9);
+	gpu->spheres = malloc(sizeof(t_obj) * quan_of_obj(gpu->f));
 	//gpu->spheres = malloc(sizeof(t_obj) * quan_type(gpu->scene));
 	// read_scene(gpu->spheres, gpu->scene);
 	// ft_putstr("\n \n \n \n");
 	// ft_putstr(ft_itoa(quan_type(gpu->scene)));
 	// ft_putstr("\n \n \n \n");
 	gpu->samples = 0;
-	initScene2(gpu->spheres);
+	//initScene(gpu->spheres);
+	initScene2(gpu->spheres,quan_of_obj(gpu->f),gpu->f);
+	ft_putstrv("333333\n");
 	bind_data(gpu, &game->main_objs);
     return (gpu->err);
 }

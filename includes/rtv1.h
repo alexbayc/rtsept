@@ -490,5 +490,8 @@ float				return_xyz(char *str);
 int					return_position(t_objpoint *f);
 int					return_color(t_objpoint *f);
 int					return_emission(t_objpoint *f);
-float					return_clr(char *str);
+float				return_clr(char *str);
+int					quan_of_obj(t_objpoint *f);
+int							return_rotation(t_objpoint *f);
+float					return_plane_d(t_objpoint *f);
 #endif
