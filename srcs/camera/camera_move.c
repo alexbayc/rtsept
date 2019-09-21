@@ -3,20 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   camera_move.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: olesgedz <olesgedz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/10 08:30:07 by olesgedz          #+#    #+#             */
-/*   Updated: 2019/08/10 08:48:44 by olesgedz         ###   ########.fr       */
+/*   Updated: 2019/09/21 18:29:59 by odale-dr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "rtv1.h"
 
-void 				camera_move
-					(t_camera *camera,
-					t_camera_direction direction,
-					float length)
+void				camera_move(t_camera *camera,
+					t_camera_direction direction, float length)
 {
 	cl_float3		step;
 

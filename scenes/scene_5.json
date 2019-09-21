@@ -1,29 +1,4 @@
-// lightsource - свет
-{
-	"Type" : "sphere",
-	"Radius" : 0.51 ,
-    "Position" :
-    {
-        "distance x" : -0.4320 ,
-        "distance y" : 0.61 ,
-        "distance z" : -0.3
-	},
-	"Color" :
-	{
-		"red"   : 1.100 ,
-		"green" : 1.1000 ,
-		"blue"  : 1.100
-	},
-	"Emission" :
-	{
-		"red"   : 0 ,
-		"green" : 0 ,
-		"blue"  : 0
-	},
-	"Reflection" : 2
-}
-
-// floor - пол
+/// floor - пол
 {
 	"Type" : "sphere",
 	"Radius" : 200 ,
@@ -35,15 +10,15 @@
 	},
 	"Color" :
 	{
-		"red"   : 0.00010 ,
-		"green" : 0.00100 ,
-		"blue"  : 1.1006120
+		"red"   : 0.010 ,
+		"green" : 0.00 ,
+		"blue"  : 0.6120
 	},
 	"Emission" :
 	{
 		"red"   : 0.0 ,
 		"green" : 0.0 ,
-		"blue"  : 1.0
+		"blue"  : 0.0
 	},
 	"Reflection" : 0
 }
@@ -54,15 +29,15 @@
 	"Radius" : 200 ,
     "Position" :
     {
-        "distance x" : 0 ,
+        "distance x"  : 0 ,
         "distance y" : 200.4 ,
         "distance z" : 0.00
 	},
 	"Color" :
 	{
-		"red"   : 0.09 ,
-		"green" : 0.08 ,
-		"blue"  : 0.07
+		"red"   : 0.9 ,
+		"green" : 0.8 ,
+		"blue"  : 0.7
 	},
 	"Emission" :
 	{
@@ -70,7 +45,7 @@
 		"green" : 0.0 ,
 		"blue"  : 0.0
 	},
-	"Reflection" : 3
+	"Reflection" : 0
 }
 
 // back wall - задняя стена
@@ -95,7 +70,7 @@
 		"green" : 0.0 ,
 		"blue"  : 0.0
 	},
-	"Reflection" : 0
+	"Reflection" : 1
 }
 
 // front wall - передняя стена
@@ -135,108 +110,114 @@
 	},
 	"Color" :
 	{
-		"red"   : 0.0710 ,
+		"red"   : 0.010 ,
+		"green" : 0.010 ,
+		"blue"  : 0.0120
+	},
+	"Emission" :
+	{
+		"red"   : 0.0 ,
+		"green" : 0.0 ,
+		"blue"  : 0.0
+	},
+	"Reflection" : 1
+}
+// sphere centre - центральный шар
+{
+	//"Type" : "sphere",
+	"Radius" : 0.819 ,
+    "Position" :
+    {
+        "distance x" : -0.30 ,
+        "distance y" :  0.5315 ,
+        "distance z" : -1.1
+	},
+	"Color" :
+	{
+		"red"   : 0.10 ,
 		"green" : 0.10 ,
 		"blue"  : 0.120
 	},
 	"Emission" :
 	{
-		"red"   : 2.0 ,
-		"green" : 0.0 ,
-		"blue"  : 0.0
+		"red"   : 6.100 ,
+		"green" : 6.0 ,
+		"blue"  : 6.10
 	},
 	"Reflection" : 0
 }
 
-// cyl cen
+// sphere centre - центральный шар2 
 {
-	"Type" : "cylinder",
-	"Radius" : 0.015 ,
-	"Rotation" :
-	{
-		"x" : 0 ,
-		"y" : 1 ,
-		"z" : 0
-	},
+	//"Type" : "sphere",
+	"Radius" : 0.19 ,
     "Position" :
     {
-        "distance x" : 0.00 ,
-        "distance y" : 0.200 ,
-        "distance z" : 0.00
+        "distance x" : 0.30 ,
+        "distance y" :  -0.215 ,
+        "distance z" : -0.32150
 	},
 	"Color" :
 	{
-		"red"   : 0.90 ,
-		"green" : 0.80 ,
-		"blue"  : 0.70
+		"red"   : 0.10 ,
+		"green" : 1.210 ,
+		"blue"  : 0.42120
 	},
 	"Emission" :
 	{
-		"red"   : 0.1000 ,
+		"red"   : 0.00100 ,
 		"green" : 0.0 ,
-		"blue"  : 0.0
+		"blue"  : 0.000510
 	},
-	"Reflection" : 0
+	"Reflection" : 5
 }
 
-// cyl right
+// sphere right
 {
-	"Type" : "cylinder",
-	"Radius" : 0.015 ,
-	"Rotation" :
-	{
-		"x" : 0 ,
-		"y" : 0 ,
-		"z" : 1
-	},
+	"Type" : "sphere",
+	"Radius" : 0.5 ,
     "Position" :
     {
-        "distance x" : -0.100 ,
-        "distance y" : 0.00 ,
-        "distance z" : 0.300
+        "distance x" : 1.0 ,
+        "distance y" : 0.0 ,
+        "distance z" : 0.0
 	},
 	"Color" :
 	{
-		"red"   : 0.90 ,
-		"green" : 0.80 ,
-		"blue"  : 0.70
-	},
-	"Emission" :
-	{
-		"red"   : 0.1000 ,
-		"green" : 0.0 ,
-		"blue"  : 0.30
-	},
-	"Reflection" : 0
-}
-
-// cyl left
-{
-	//"Type" : "cylinder",
-	"Radius" : 0.015 ,
-	"Rotation" :
-	{
-		"x" : 1 ,
-		"y" : 0 ,
-		"z" : 0
-	},
-    "Position" :
-    {
-        "distance x" : -0.300 ,
-        "distance y" : -0.300 ,
-        "distance z" : 0.3100
-	},
-	"Color" :
-	{
-		"red"   : 0.090 ,
-		"green" : 1.080 ,
-		"blue"  : 0.070
-	},
-	"Emission" :
-	{
-		"red"   : 0.0000 ,
+		"red"   : 0.21000 ,
 		"green" : 0.1000 ,
-		"blue"  : 0.0
+		"blue"  : 0.2100
 	},
-	"Reflection" : 0
+	"Emission" :
+	{
+		"red"   : 0.100 ,
+		"green" : 0.1000 ,
+		"blue"  : 0.1000
+	},
+	"Reflection" : 8
+}
+
+// sphere left
+{
+	//"Type" : "sphere",
+	"Radius" : 0.2 ,
+    "Position" :
+    {
+        "distance x" : -0.50 ,
+        "distance y" : -0.250 ,
+        "distance z" : -0.20
+	},
+	"Color" :
+	{
+		"red"   : 0.21000 ,
+		"green" : 0.1000 ,
+		"blue"  : 0.2100
+	},
+	"Emission" :
+	{
+		"red"   : 0.100 ,
+		"green" : 0.1000 ,
+		"blue"  : 0.1000
+	},
+	"Reflection" : 8
 }

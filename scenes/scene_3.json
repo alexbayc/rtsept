@@ -1,27 +1,99 @@
-// lightsource - свет
+
+// sphere centre - центральный шар
 {
-	"Type" : "sphere",
-	
-	"Radius" : 1234.0 ,
+	//"Type" : "sphere",
+	"Radius" : 0.819 ,
     "Position" :
     {
-
-        "distance x" : 5 ,
-        "distance y" : -20 ,
-		"distance z" : 0
-		
+        "distance x" : -0.30 ,
+        "distance y" :  0.5315 ,
+        "distance z" : -1.1
 	},
 	"Color" :
 	{
-		"red" : 1.100 ,
-		"green" : 0.1000 ,
-		"blue"  : 1.100
+		"red"   : 0.10 ,
+		"green" : 0.10 ,
+		"blue"  : 0.120
 	},
-	"Emission" : 
+	"Emission" :
 	{
-		"red"   : 1 ,
-		"green" : 9 ,
-		"blue"  : 0.510
+		"red"   : 6.100 ,
+		"green" : 6.0 ,
+		"blue"  : 6.10
 	},
-	"Reflection" : 3
+	"Reflection" : 0
+}
+
+// left wall - левая стена
+{
+	"Type" : "sphere",
+	"Radius" : 200 ,
+    "Position" :
+    {
+        "distance x" : -200.60 ,
+        "distance y" : 0.0 ,
+        "distance z" : 0.00
+	},
+	"Color" :
+	{
+		"red"   : 0.010 ,
+		"green" : 0.010 ,
+		"blue"  : 0.0120
+	},
+	"Emission" :
+	{
+		"red"   : 0.0 ,
+		"green" : 0.0 ,
+		"blue"  : 0.0
+	},
+	"Reflection" : 1
+}
+
+/// floor - пол
+{
+	"Type" : "sphere",
+	"Radius" : 200 ,
+    "Position" :
+    {
+        "distance x" : 0 ,
+        "distance y" : -200.40 ,
+        "distance z" : 0.00
+	},
+	"Color" :
+	{
+		"red"   : 0.010 ,
+		"green" : 0.00 ,
+		"blue"  : 0.6120
+	},
+	"Emission" :
+	{
+		"red"   : 0.0 ,
+		"green" : 0.0 ,
+		"blue"  : 0.0
+	},
+	"Reflection" : 0
+}
+// ceiling - потолок
+{
+	"Type" : "sphere",
+	"Radius" : 200 ,
+    "Position" :
+    {
+        "distance x"  : 0 ,
+        "distance y" : 200.4 ,
+        "distance z" : 0.00
+	},
+	"Color" :
+	{
+		"red"   : 0.9 ,
+		"green" : 0.8 ,
+		"blue"  : 0.7
+	},
+	"Emission" :
+	{
+		"red"   : 1.0 ,
+		"green" : 0.0 ,
+		"blue"  : 0.0
+	},
+	"Reflection" : 0
 }

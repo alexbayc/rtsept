@@ -6,7 +6,7 @@
 /*   By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 15:34:45 by sdurgan           #+#    #+#             */
-/*   Updated: 2019/09/11 19:19:39 by odale-dr         ###   ########.fr       */
+/*   Updated: 2019/09/21 17:08:09 by odale-dr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -199,37 +199,26 @@ int	main(int argc, char **argv)
 {
 	t_objpoint		*figure;
 	if ((figure = memory_for_objpoint()) == NULL)
-		return(0);
-	if (valid (argv[1], figure)!= 0)
+		return (0);
+	if (valid(argv[1], figure) != 0)
 	{
 		free_figures(figure);
-		return(0);
+		return (0);
 	}
-	// t_cl_info cl_info;
-	// cl_init(&cl_info);s
-	//VECT_ADD(v, "hello");
-	//printf("%s", (char *)v->data);
 	game.sdl = malloc(sizeof(t_sdl));
 	game.image = ft_surface_create(WIN_W, WIN_H);
-	t_material ivory = (t_material){(t_vec3){0.4, 0.4, 0.3},.albendo= (t_vec3){0.6, 0.3, .0, .0}, .specular_exponent=50};
-	t_material glass = (t_material){(t_vec3){.6, 0.7, 0.8}, .albendo =(t_vec3){0, 0.5, 0.1, 0.8}, .specular_exponent=125.};
-	t_material red_rubber = (t_material){(t_vec3){0.3, 0.1, 0.1}, .albendo= (t_vec3){0.9, 0.1, .0, .0}, .specular_exponent=10};
-	t_material mirror = (t_material){(t_vec3){1.0, 1.0, 1.0}, .albendo =(t_vec3){0, 10, 0.8, .1}, .specular_exponent=1425.};
 	game.main_objs.lights = ft_memalloc(sizeof(t_light) * 5);
 	game.main_objs.lights[0] = (t_light){(t_vec3){0, 0, -5}, 2};
 	game.main_objs.lights[1] = (t_light){(t_vec3){-5, 0, -5}, 2};
 	game.main_objs.lights[2] = (t_light){(t_vec3){-2, 0, -5}, 2};
 	game.main_objs.lights[3] = (t_light){(t_vec3){5, 0, -5}, 2};
-	game.main_objs.elum_num = 5; // number of light sources
+	game.main_objs.elum_num = 5;
 	game.init_render = 1;
-	game.origin = (t_vec3){0,0,5,1};
+	game.origin = (t_vec3){0, 0, 5, 1};
 	game.gpu = (t_gpu *)malloc(sizeof(t_gpu));
-	game.gpu->scene = argv[1];
 	game.gpu->f = figure;
-	quan_of_obj(figure);
-	opencl_init(game.gpu, &game);
+	opencl_init2(game.gpu, &game);
 	ft_init_window(game.sdl, WIN_W, WIN_H);
-
 	ft_update(&game);
 	clReleaseMemObject(game.gpu->cl_bufferOut);
 	release_gpu(game.gpu);

@@ -6,7 +6,7 @@
 #    By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/16 12:58:07 by jblack-b          #+#    #+#              #
-#    Updated: 2019/09/11 19:51:34 by odale-dr         ###   ########.fr        #
+#    Updated: 2019/09/21 19:30:01 by odale-dr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,7 +59,6 @@ LIB_LIST =	libSDL2.a\
 SRCS_DIRECTORY = ./srcs/
 
 SRCS_LIST = main.c map_parser.c vectors.c quaternion.c rotate.c intersect.c matrix.c normals.c math.c \
-			cl_lib/gpu_init.c
 
 SRCS_LIST += camera/camera_new.c camera/camera_move.c
 SRCS_LIST += pars/create_cfloat3x.c \
@@ -80,6 +79,9 @@ SRCS_LIST += pars/create_cfloat3x.c \
 			 pars/return_color.c pars/return_emission.c \
 			 pars/quan_of_obj.c pars/return_rotation.c \
 			 pars/return_plane_d.c
+SRCS_LIST += initscene2.c create_cfloat3.c gpu_read_kernel.c cl_lib/bind_data.c \
+			cl_lib/gpu_init2.c quandratic_solve.c matrix2.c matrix3.c point2.c \
+			quaternion2.c
 			 
 OBJS_DIRECTORY = objects/
 OBJS_LIST = $(patsubst %.c, %.o, $(SRCS_LIST))

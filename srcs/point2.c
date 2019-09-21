@@ -1,29 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   camera_new.c                                       :+:      :+:    :+:   */
+/*   point2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/10 08:34:38 by olesgedz          #+#    #+#             */
-/*   Updated: 2019/09/21 17:42:29 by odale-dr         ###   ########.fr       */
+/*   Created: 2019/09/21 19:20:37 by odale-dr          #+#    #+#             */
+/*   Updated: 2019/09/21 19:24:26 by odale-dr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rtv1.h"
 
-t_camera			*camera_new(int width, int height)
+t_point3			ft_point3_sum(t_point3 a, t_point3 b)
 {
-	t_camera		*new;
+	t_point3		new;
 
-	new = (t_camera *)malloc(sizeof(t_camera));
-	new->forward = (cl_float3){0., 0., -1. *
-					width / (tan((M_PI / 3.) / 2.))};
-	new->axis_x = (cl_float3){1., 0., 0.};
-	new->axis_y = (cl_float3){0., 1., 0.};
-	new->axis_z = (cl_float3){0., 0., 1.};
-	new->position = (cl_float3){0., 0., 0.};
-	new->width = width;
-	new->height = height;
+	new.x = a.x + b.x;
+	new.y = a.y + b.y;
+	new.z = a.z + b.z;
+	return (new);
+}
+
+t_point3			ft_point3_substract(t_point3 a, t_point3 b)
+{
+	t_point3		new;
+
+	new.x = a.x - b.x;
+	new.y = a.y - b.y;
+	new.z = a.z - b.z;
+	return (new);
+}
+
+t_point3			ft_point3_substract_vec3(t_point3 a, t_vec3 b)
+{
+	t_point3		new;
+
+	new.x = a.x - b.x;
+	new.y = a.y - b.y;
+	new.z = a.z - b.z;
 	return (new);
 }
