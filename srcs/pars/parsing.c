@@ -6,7 +6,7 @@
 /*   By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/31 13:57:20 by odale-dr          #+#    #+#             */
-/*   Updated: 2019/09/07 19:03:10 by odale-dr         ###   ########.fr       */
+/*   Updated: 2019/09/24 19:20:18 by odale-dr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,6 @@ int						extract(int st, int end, char **file, t_objpoint *f)
 	f->file = file;
 	if (valid_type(f, type) != 0)
 		return (-1);
-	ft_putstr(ft_itoa(f->end));
-	ft_putstr(" <--------++++++ end of obj\n\n\n");
 	if (pulling_out(f, type) != 0)
 		return (-1);
 	f->next = memory_for_objpoint();
@@ -67,10 +65,7 @@ int						cuting(char **file, int *i, t_objpoint *f)
 	if (c != 3)
 		c = extract(start, end, file, f);
 	if (c == -1 || c == 3)
-	{
-		ft_putstrv1("Check and fix your object before the line - ");
-		ft_putendl(ft_itoa(end));
-	}
+		ft_putstrv2("Check and fix your object before the line - ", end);
 	return (c);
 }
 
@@ -83,14 +78,9 @@ int						parsing(t_objpoint *f, char **file)
 	i = 0;
 	while (file[i] != NULL && i <= 10000 && flag == 0)
 	{
-		//ft_putstrv(file[i]);
 		if (ft_strstr(file[i], "{") != NULL)
 			flag = cuting(file, &i, f);
 		i++;
 	}
-	ft_putendl(ft_itoa(i));
-	ft_putendl(ft_itoa(f->end));
-	//ft_putendl(ft_itoa(f->next->end));
-	ft_putendl("\nKONEC");
 	return (flag);
 }

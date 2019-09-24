@@ -6,7 +6,7 @@
 /*   By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 18:46:54 by odale-dr          #+#    #+#             */
-/*   Updated: 2019/09/11 19:48:46 by odale-dr         ###   ########.fr       */
+/*   Updated: 2019/09/24 19:04:25 by odale-dr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ float					return_clr(char *str)
 		ft_putstrv1("One of your Colors size is too big (more than 10)");
 		return (-1);
 	}
-	printf("\n -> %f <- \n", clr);
 	return (clr);
 }
 
@@ -40,7 +39,6 @@ float					return_xyz(char *str)
 		ft_putstrv1("Your coordinats size is too big (more than 100000)");
 		return (-123456789);
 	}
-	printf("\n xyz -> %f <- \n", xyz);
 	return (xyz);
 }
 
@@ -60,7 +58,6 @@ float					return_reflection(t_objpoint *f)
 		ft_putstrv1("Your Reflection size is too big (more than 50)");
 		return (-1);
 	}
-	printf("\n -> %f <- \n", ref);
 	return (ref);
 }
 
@@ -80,6 +77,5 @@ float					return_radius(t_objpoint *f)
 		ft_putstrv1("Your Radius size is too big (more than 100000)");
 		return (-1);
 	}
-	printf("\n -> %f <- \n", rad);
 	return (rad);
 }

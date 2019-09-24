@@ -6,7 +6,7 @@
 /*   By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/29 18:41:47 by odale-dr          #+#    #+#             */
-/*   Updated: 2019/08/31 18:29:00 by odale-dr         ###   ########.fr       */
+/*   Updated: 2019/09/24 19:42:04 by odale-dr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ int						s_valid(char *json, t_objpoint *f)
 		return (2);
 	if (read_fd(fd, f) != 0)
 		return (3);
-
 	return (0);
 }
 

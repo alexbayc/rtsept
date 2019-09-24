@@ -6,7 +6,7 @@
 /*   By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/11 19:37:02 by odale-dr          #+#    #+#             */
-/*   Updated: 2019/09/11 19:44:26 by odale-dr         ###   ########.fr       */
+/*   Updated: 2019/09/24 19:03:55 by odale-dr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,5 @@ float					return_plane_d(t_objpoint *f)
 		ft_putstrv1("Your Plane_d size is too big (more than 100)");
 		return (-1);
 	}
-	printf("\n -> %f <- \n", rad);
 	return (rad);
 }

@@ -6,7 +6,7 @@
 /*   By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 18:15:47 by odale-dr          #+#    #+#             */
-/*   Updated: 2019/09/04 18:43:56 by odale-dr         ###   ########.fr       */
+/*   Updated: 2019/09/24 18:17:14 by odale-dr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int					find_end_of_block(int i, t_objpoint *f)
 
 	start = i;
 	q = 0;
-
 	while (start <= f->end)
 	{
 		if (ft_strstr(f->file[start], "{") != NULL)

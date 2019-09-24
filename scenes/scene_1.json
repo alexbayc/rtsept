@@ -150,19 +150,19 @@
 
 // cyl cen
 {
-	"Type" : "cylinder",
+	"Type" : "plane",
 	"Radius" : 0.015 ,
 	"Rotation" :
 	{
 		"x" : 0 ,
-		"y" : 1 ,
-		"z" : 0
+		"y" : 0 ,
+		"z" : 1
 	},
     "Position" :
     {
         "distance x" : 0.00 ,
-        "distance y" : 0.200 ,
-        "distance z" : 0.00
+        "distance y" : 0.000 ,
+        "distance z" : -0.300
 	},
 	"Color" :
 	{
@@ -176,7 +176,8 @@
 		"green" : 0.0 ,
 		"blue"  : 0.0
 	},
-	"Reflection" : 0
+	"Reflection" : 0,
+	"Plane_d" : 2
 }
 
 // cyl right

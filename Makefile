@@ -6,7 +6,7 @@
 #    By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/16 12:58:07 by jblack-b          #+#    #+#              #
-#    Updated: 2019/09/21 19:30:01 by odale-dr         ###   ########.fr        #
+#    Updated: 2019/09/24 20:06:01 by odale-dr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,7 @@ SRCS_LIST = main.c map_parser.c vectors.c quaternion.c rotate.c intersect.c matr
 
 SRCS_LIST += camera/camera_new.c camera/camera_move.c
 SRCS_LIST += pars/create_cfloat3x.c \
-			 pars/read_scene.c pars/return_float.c pars/type.c \
+			 pars/return_float.c \
 			 pars/valid.c pars/memory_for_objpoint.c pars/read_fd.c \
 			 pars/ft_putstrv.c pars/free_gnl.c pars/parsing.c \
 			 pars/repit.c pars/fig_valid.c pars/numb_of_line.c \
@@ -81,7 +81,7 @@ SRCS_LIST += pars/create_cfloat3x.c \
 			 pars/return_plane_d.c
 SRCS_LIST += initscene2.c create_cfloat3.c gpu_read_kernel.c cl_lib/bind_data.c \
 			cl_lib/gpu_init2.c quandratic_solve.c matrix2.c matrix3.c point2.c \
-			quaternion2.c
+			quaternion2.c quaternion3.c
 			 
 OBJS_DIRECTORY = objects/
 OBJS_LIST = $(patsubst %.c, %.o, $(SRCS_LIST))

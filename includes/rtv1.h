@@ -461,13 +461,13 @@ int					quan_type(char *s);
 int					ft_valid(char **f, const int i, int *j);
 cl_float3 			create_cfloat3x (float x, float y, float z);
 float		   		return_float(char *s);
-void				type(t_obj *cpu_spheres, char **x, int r, int t);
 void				read_scene(t_obj* cpu_spheres, char *s);
 
 int						valid(char	*json, t_objpoint *f);
 t_objpoint			*memory_for_objpoint();
 int						read_fd(int fd, t_objpoint *f);
 void				ft_putstrv(char *s);
+void				ft_putstrv2(char *s, int end);
 void				free_gnl(char **s);
 int						parsing(t_objpoint *f, char **file);
 int					repit(int st, int end, char *sl, char **file);
