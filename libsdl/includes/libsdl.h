@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libsdl.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: olesgedz <olesgedz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 19:47:22 by jblack-b          #+#    #+#             */
-/*   Updated: 2019/07/14 20:38:12 by olesgedz         ###   ########.fr       */
+/*   Updated: 2019/09/27 19:23:56 by odale-dr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,12 +137,13 @@ typedef struct s_sdl
 
 } t_sdl;
 
+
 void			ft_plot_line(t_surface *surface,
 	t_point *p1, t_point *p2, int color);
 void			ft_put_pixel(t_surface *surface, t_point *p, int color);
 void			ft_init_window(t_sdl *sdl, size_t win_w, size_t win_h);
 void			ft_exit(int (*f)(void));
-void			ft_input(void *main, int (*f)(void *main, SDL_Event *ev));
+void			ft_input(void *main, int (*f)(void *main, SDL_Event *ev, void *game), void *game);
 void			ft_surface_present(t_sdl *sdl, t_surface *surface);
 void			ft_surface_clear(t_surface *surface);
 t_surface		*ft_surface_create(int width, int height);

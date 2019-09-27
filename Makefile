@@ -6,7 +6,7 @@
 #    By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/16 12:58:07 by jblack-b          #+#    #+#              #
-#    Updated: 2019/09/24 20:06:01 by odale-dr         ###   ########.fr        #
+#    Updated: 2019/09/27 18:36:53 by odale-dr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,7 +81,7 @@ SRCS_LIST += pars/create_cfloat3x.c \
 			 pars/return_plane_d.c
 SRCS_LIST += initscene2.c create_cfloat3.c gpu_read_kernel.c cl_lib/bind_data.c \
 			cl_lib/gpu_init2.c quandratic_solve.c matrix2.c matrix3.c point2.c \
-			quaternion2.c quaternion3.c
+			quaternion2.c quaternion3.c vectors2.c vectors3.c game_init.c
 			 
 OBJS_DIRECTORY = objects/
 OBJS_LIST = $(patsubst %.c, %.o, $(SRCS_LIST))

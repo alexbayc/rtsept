@@ -509,12 +509,13 @@ int					return_rotation(t_objpoint *f);
 float				return_plane_d(t_objpoint *f);
 
 void 				initscene2(t_obj* cpu_spheres, int n, t_objpoint *ff);
-cl_float3				create_cfloat3(float x, float y, float z);
+cl_float3			create_cfloat3(float x, float y, float z);
 int   				 gpu_read_kernel(t_gpu *gpu);
 int					bind_data(t_gpu *gpu, t_main_obj *main);
 int					opencl_init2(t_gpu *gpu, t_game *game);
 double				quandratic_solve(double k1, double k2, double k3);
 void				ft_mat4_print(t_mat4 mat);
 t_mat4				ft_mat4_rotation_matrix(t_vec3 axis, double alpha);
+void				game_init(t_game *game);
 
 #endif

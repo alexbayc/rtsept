@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libcl.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: olesgedz <olesgedz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/11 18:24:58 by qle-guen          #+#    #+#             */
-/*   Updated: 2019/08/05 01:56:14 by olesgedz         ###   ########.fr       */
+/*   Updated: 2019/09/27 19:23:40 by odale-dr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define LIBCL_H
 
 # include "libvect.h"
-#define CL_SILENCE_DEPRECATION
+# define CL_SILENCE_DEPRECATION
 
 # include <OpenCL/opencl.h>
 

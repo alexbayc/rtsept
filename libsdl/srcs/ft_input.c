@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_input.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jblack-b <jblack-b@student.42.fr>          +#+  +:+       +#+        */
+/*   By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/18 13:22:51 by jblack-b          #+#    #+#             */
-/*   Updated: 2019/05/16 18:58:09 by jblack-b         ###   ########.fr       */
+/*   Updated: 2019/09/27 18:54:39 by odale-dr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 *	Parameters: main struct of program, fuction that handles events from the program
 *	Return: none
 */
-void	ft_input(void *main, int (*f)(void *main, SDL_Event *ev))
+void	ft_input(void *main, int (*f)(void *main, SDL_Event *ev, void *game), void *game)
 {
 	SDL_Event ev;
 
 	while (SDL_PollEvent(&ev))
-		f(main, &ev);
+		f(main, &ev, game);
 }

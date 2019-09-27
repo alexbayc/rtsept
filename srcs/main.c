@@ -6,7 +6,7 @@
 /*   By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 15:34:45 by sdurgan           #+#    #+#             */
-/*   Updated: 2019/09/21 17:08:09 by odale-dr         ###   ########.fr       */
+/*   Updated: 2019/09/27 20:20:08 by odale-dr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 
 #define FPS
 
-t_game game;
+//t_game game;
 float xa, ya, za;
 
 float eyex, eyey, eyez;
@@ -34,8 +34,11 @@ float eyex, eyey, eyez;
 *	- can handle multiple presses at once
 *	- that goes into libsdl void ft_input(void *main, int (*f)(void *main, SDL_Event *ev))
 */
-int		ft_input_keys(void *sdl, SDL_Event *ev)
+int		ft_input_keys(void *sdl, SDL_Event *ev, void *s)
 {
+	t_game 		*g;
+
+	g = s;
 	switch (ev->type)
 		{
 			case SDL_KEYDOWN:
@@ -45,14 +48,14 @@ int		ft_input_keys(void *sdl, SDL_Event *ev)
 					case SDLK_LCTRL:
 					case SDLK_RCTRL:
 					case SDLK_ESCAPE: ft_exit(NULL); break;
-					case 'w': game.wsad[0] = ev->type==SDL_KEYDOWN; break;
-					case 's': game.wsad[1] = ev->type==SDL_KEYDOWN; break;
-					case 'a': game.wsad[2] = ev->type==SDL_KEYDOWN; break;
-					case 'd': game.wsad[3] = ev->type==SDL_KEYDOWN; break;
-					case 'q': game.wsad[4] = ev->type==SDL_KEYDOWN; break;
-					case 'e': game.wsad[5] = ev->type==SDL_KEYDOWN; break;
-					case 'z': game.wsad[6] = ev->type==SDL_KEYDOWN; break;
-					case 'x': game.wsad[7] = ev->type==SDL_KEYDOWN; break;
+					case 'w': g->wsad[0] = ev->type==SDL_KEYDOWN; break;
+					case 's': g->wsad[1] = ev->type==SDL_KEYDOWN; break;
+					case 'a': g->wsad[2] = ev->type==SDL_KEYDOWN; break;
+					case 'd': g->wsad[3] = ev->type==SDL_KEYDOWN; break;
+					case 'q': g->wsad[4] = ev->type==SDL_KEYDOWN; break;
+					case 'e': g->wsad[5] = ev->type==SDL_KEYDOWN; break;
+					case 'z': g->wsad[6] = ev->type==SDL_KEYDOWN; break;
+					case 'x': g->wsad[7] = ev->type==SDL_KEYDOWN; break;
 					case 'p': ya+=0.2; break;
 					case ';': ya-=0.2; break;
 					case SDLK_LEFT: xa+=0.05; break;
@@ -96,17 +99,20 @@ t_vec3 refract(t_vec3 I, t_vec3 N, const float eta_t, const float eta_i) { // Sn
     return avg / total;
   }
 
-void ft_filter(t_game* game)
+void						ft_filter(t_game* game)
 {
-	int		i;
-	int		j;
-	int width = game->sdl->surface->width;
-	int height = game->sdl->surface->height;
+	int						i;
+	int						j;
+	int						width;
+	int						height;
+
+	width = game->sdl->surface->width;
+	height = game->sdl->surface->height;
 	j = -1;
 	while (++j < height)
 	{
 		i = -1;
-		while (++i < width)	
+		while(++i < width)	
 		{
 			game->sdl->surface->data[i+j*width] = getSurroundingAverage(game, i, j, 1); //game->gpu->cpuOutput[i+ j *width];
 
@@ -118,12 +124,15 @@ void ft_filter(t_game* game)
 *	Parameters: game, sdl
 *	Return: none
 */
-void 	ft_render(t_game* game)
+void						ft_render(t_game* game)
 {
-	int		i;
-	int		j;
-	int width = game->sdl->surface->width;
-	int height = game->sdl->surface->height;
+	int						i;
+	int						j;
+	int						width;
+	int						height;
+
+	width = game->sdl->surface->width;
+	height = game->sdl->surface->height;
 	j = -1;
 	ft_run_gpu(game->gpu);
 	while (++j < height)
@@ -154,12 +163,15 @@ void ft_update(t_game *game)
 	t_rectangle r = (t_rectangle){(t_point){0,0},(t_size){WIN_W, WIN_H}};
 	clock_t current_ticks, delta_ticks;
 	clock_t fps = 0;
-	while(TRUE)
+	void				*s;
+
+	s = game;
+	while (TRUE)
 	{
 		current_ticks = clock();
 		ft_surface_clear(game->sdl->surface);
-		ft_input(game->sdl, &ft_input_keys);
-		game->wsad[0] ? game->main_objs.lights[0].position.z -= 1: 0;
+		ft_input(game->sdl, &ft_input_keys, s);
+		game->wsad[0] ? game->main_objs.lights[0].position.z -= 1 : 0;
 		game->wsad[1] ? game->main_objs.lights[0].position.z += 1 : 0;
 		game->wsad[2] ? game->main_objs.lights[0].position.x -= 1 : 0;
 		game->wsad[3] ? game->main_objs.lights[0].position.x += 1 : 0;
@@ -171,6 +183,7 @@ void ft_update(t_game *game)
 			game->wsad[2] || game->wsad[3] || game->wsad[4] || game->wsad[5] ||
 			game->wsad[6] || game->wsad[7])
 			{
+				ft_putendl("===");
 				game->init_render = 0;
 				ft_render(game);
 				ft_surface_present(game->sdl, game->sdl->surface);
@@ -183,21 +196,34 @@ void ft_update(t_game *game)
 			//printf("fps :%lu\n", fps);
 	#endif
 	SDL_Delay(200);
+	game->wsad[0] = 0;
+	game->wsad[1] = 0;
+	game->wsad[2] = 0;
+	game->wsad[3] = 0;
+	game->wsad[4] = 0;
+	game->wsad[5] = 0;
+	game->wsad[6] = 0;
+	game->wsad[7] = 0;
 	}
 }
 
-void ft_object_push(t_game *game, t_object *object)
+void						ft_object_push(t_game *game, t_object *object)
 {
 	if (game->main_objs.figures == NULL)
 		game->main_objs.figures_num = 0;
-	game->main_objs.figures = realloc(game->main_objs.figures, sizeof(t_object) * (game->main_objs.figures_num + 1));
+	game->main_objs.figures = realloc(game->main_objs.figures,
+													sizeof(t_object) *
+													(game->main_objs.figures_num
+													+ 1));
 	game->main_objs.figures[game->main_objs.figures_num] = *object;
 	game->main_objs.figures_num += 1;
 }
 
-int	main(int argc, char **argv)
+int							main(int argc, char **argv)
 {
+	t_game				game;
 	t_objpoint		*figure;
+
 	if ((figure = memory_for_objpoint()) == NULL)
 		return (0);
 	if (valid(argv[1], figure) != 0)
@@ -205,16 +231,7 @@ int	main(int argc, char **argv)
 		free_figures(figure);
 		return (0);
 	}
-	game.sdl = malloc(sizeof(t_sdl));
-	game.image = ft_surface_create(WIN_W, WIN_H);
-	game.main_objs.lights = ft_memalloc(sizeof(t_light) * 5);
-	game.main_objs.lights[0] = (t_light){(t_vec3){0, 0, -5}, 2};
-	game.main_objs.lights[1] = (t_light){(t_vec3){-5, 0, -5}, 2};
-	game.main_objs.lights[2] = (t_light){(t_vec3){-2, 0, -5}, 2};
-	game.main_objs.lights[3] = (t_light){(t_vec3){5, 0, -5}, 2};
-	game.main_objs.elum_num = 5;
-	game.init_render = 1;
-	game.origin = (t_vec3){0, 0, 5, 1};
+	game_init(&game);
 	game.gpu = (t_gpu *)malloc(sizeof(t_gpu));
 	game.gpu->f = figure;
 	opencl_init2(game.gpu, &game);
