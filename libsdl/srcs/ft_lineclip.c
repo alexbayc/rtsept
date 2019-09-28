@@ -3,34 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lineclip.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: olesgedz <olesgedz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 02:14:57 by olesgedz          #+#    #+#             */
-/*   Updated: 2019/05/18 02:13:14 by olesgedz         ###   ########.fr       */
+/*   Updated: 2019/09/28 15:28:47 by odale-dr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libsdl.h"
-/*
-** Helper function to get a t_point with a size
-*/
 
-static t_point	size(int w, int h)
+static t_point			size(int w, int h)
 {
-	t_point p;
+	t_point				p;
 
 	p.x = w;
 	p.y = h;
 	return (p);
 }
 
-/*
-** Gets the region (top, bottom), (left, right)
-*/
-
-static int		region(int x, int y, int w, int h)
+static int				region(int x, int y, int w, int h)
 {
-	int c;
+	int					c;
 
 	c = 0;
 	if (y >= h)
@@ -44,13 +37,10 @@ static int		region(int x, int y, int w, int h)
 	return (c);
 }
 
-/*
-** Clips the lines according to the region codes
-*/
-
-static t_point	clip_xy(t_point *p1, t_point *p2, t_point size, int rout)
+static t_point			clip_xy(t_point *p1, t_point *p2,
+						t_point size, int rout)
 {
-	t_point p;
+	t_point				p;
 
 	if (rout & 1)
 	{
@@ -75,16 +65,12 @@ static t_point	clip_xy(t_point *p1, t_point *p2, t_point size, int rout)
 	return (p);
 }
 
-/*
-** Implementation of the Cohen–Sutherland line-clipping algorithm
-*/
-
-int				lineclip(t_point *p1, t_point *p2, int w, int h)
+int						lineclip(t_point *p1, t_point *p2, int w, int h)
 {
-	t_point		p;
-	int			r1;
-	int			r2;
-	int			rout;
+	t_point				p;
+	int					r1;
+	int					r2;
+	int					rout;
 
 	r1 = region(p1->x, p1->y, w, h);
 	r2 = region(p2->x, p2->y, w, h);

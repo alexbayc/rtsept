@@ -3,24 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_plot_wline.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jblack-b <jblack-b@student.42.fr>          +#+  +:+       +#+        */
+/*   By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/25 15:39:46 by jblack-b          #+#    #+#             */
-/*   Updated: 2019/05/17 14:39:55 by jblack-b         ###   ########.fr       */
+/*   Updated: 2019/09/28 15:39:16 by odale-dr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libsdl.h"
 
-/*
-*	Fucntion: draws line on the screen using Xiaolin Wu's line algorithm
-*	Parameters: surface, point 1, point 2, color of the line
-*	Return: none
-*	? Is it any better? I have no idea
-*/
-
-
-static void plot(t_surface *surface, int x, int y, float opacity, int color)
+static void			plot(t_surface *surface, int x, int y, float opacity, int color)
 {
     opacity = powf(opacity, 1/2.2f);
     int *pix = ((int*) surface->data) + y * surface->width + x;
@@ -33,7 +25,7 @@ static void plot(t_surface *surface, int x, int y, float opacity, int color)
     *pix = (r << 16) | (g << 8) | b;
 }
 
-void		ft_plot_wline(t_surface *surface,
+void				ft_plot_wline(t_surface *surface,
 	t_fpoint *p0, t_fpoint *p1, int color)
 {
     int steep = fabsf(p1->y - p0->y) > fabsf(p1->x - p0->x);

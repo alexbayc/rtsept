@@ -1,10 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_line.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/28 15:22:09 by odale-dr          #+#    #+#             */
+/*   Updated: 2019/09/28 15:25:33 by odale-dr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libsdl.h"
 
-
-void ft_line(t_surface *surface,
-	t_point *p1, t_point *p2, int color)
+void			ft_line(t_surface *surface,
+						t_point *p1, t_point *p2, int color)
 {
-    int steep = FALSE; 
+	int			steep = FALSE;
     if (abs(p1->x - p2->x)<abs(p1->y - p2->y)) { 
         ft_swap_int(&p1->x, &p1->y); 
         ft_swap_int(&p2->x, &p2->y); 
@@ -29,6 +40,6 @@ void ft_line(t_surface *surface,
         if (error>.5) { 
             y += (p2->y>p1->y?1:-1); 
             error -= 1.; 
-        } 
-    } 
-} 
+        }
+    }
+}

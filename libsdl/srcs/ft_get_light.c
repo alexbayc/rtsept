@@ -3,19 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_get_light.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jblack-b <jblack-b@student.42.fr>          +#+  +:+       +#+        */
+/*   By: odale-dr <odale-dr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/23 00:55:35 by olesgedz          #+#    #+#             */
-/*   Updated: 2019/05/16 18:49:30 by jblack-b         ###   ########.fr       */
+/*   Updated: 2019/09/28 15:20:49 by odale-dr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-*	Fucntion: get intensity
-*	Parameters: starting point , end point, precentage of it
-*	Return: resulting intensity
-*	? name change?
-*/
 
 int		ft_get_light(int start, int end, double percentage)
 {
